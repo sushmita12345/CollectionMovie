@@ -3,24 +3,24 @@ import "./styles.css";
 
 const movies = {
   Horror: [
-    { name: "The Conjuring", genres: "Horror", directors: "James Wan" },
-    { name: "Annabelle", genres: "Horror", directors: "David F. Sandberg" },
+    { name: "The Conjuring", genres: "Horror", director: "James Wan" },
+    { name: "Annabelle", genres: "Horror", director: "David F. Sandberg" },
     {
       name: "Don't knock twice",
       genres: "Horror",
-      directors: "Caradog W. James"
+      director: "Caradog W. James"
     }
   ],
   Thriller: [
     {
       name: "Breathe: Into the Shadows",
       genres: "Suspense",
-      directors: "Mayank Sharma"
+      director: "Mayank Sharma"
     },
     {
       name: "The Widow",
       genres: "Suspense",
-      directors: "Sam Donavan, Olly Blackburn"
+      director: "Sam Donavan, Olly Blackburn"
     },
     { name: "Kruthi", genres: "Suspense", director: "Manu Warrier" }
   ],
@@ -52,22 +52,24 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Movies Collection</h1>
-      <div className="center">
-        {Object.keys(movies).map((show) => (
-          <button onClick={() => showClickHandler(show)}>{show}</button>
-        ))}
-      </div>
-      <div className="center">
-        <ul className="non-bullet">
-          {movies[userInput].map((movies) => (
-            <li key={movies.name}>
-              <div className="movies">
-                {movies.name}, {movies.genres}, {movies.director}
-              </div>
-            </li>
+      <div className="wrapper">
+        <h1>Movies Collection</h1>
+        <div className="center">
+          {Object.keys(movies).map((show) => (
+            <button onClick={() => showClickHandler(show)}>{show}</button>
           ))}
-        </ul>
+        </div>
+        <div className="center">
+          <ul className="non-bullet">
+            {movies[userInput].map((movies) => (
+              <li key={movies.name}>
+                <div className="movies">
+                  {movies.name}, {movies.genres}, {movies.director}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

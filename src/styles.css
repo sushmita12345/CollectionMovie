@@ -1,14 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 :root {
-  --primary-color: #14b8a6;
-  --blue-gray: #475569;
-  --true-gray: #e5e5e5;
+  --primary-color: #A78BFA;
+ 
 }
 
 .App {
-  font-family: "Architects Daughter", cursive;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
+ 
+}
+
+.wrapper{
+  border-style: solid;
+  border-color: var(--primary-color);
+  width: 55vw;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 body {
@@ -17,8 +27,11 @@ body {
 }
 
 h1 {
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1rem;
-  margin: 0px;
+  
   background: var(--primary-color);
 }
 
@@ -31,9 +44,9 @@ h1 {
 button {
   margin: 1rem;
   padding: 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   color: var(--primary-color);
-  background-color: var(--blue-gray);
+  background-color: white;
 }
 
 .non-bullet {
@@ -45,10 +58,52 @@ button {
   display: inline;
 }
 
-.series {
+.movies {
   padding: 1rem;
   border: 2px solid var(--primary-color);
   margin: 1rem;
   border-radius: 1rem;
   display: block;
+}
+
+@media only screen and (max-width: 700px) {
+
+  .App {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+   
+  }
+  
+  .wrapper{
+    
+    width: 85vw;
+
+    height: 80vh;
+   
+  
+  }
+  
+  h1 {
+    width: 70vw;
+  }
+  
+  .center {
+    width: 90vw;
+    margin: auto;
+    
+  }
+  
+  button {
+    margin: 0.5rem;
+  }
+  
+
+  .movies {
+    padding: 1rem;
+    border: 2px solid var(--primary-color);
+    margin: 1rem;
+    border-radius: 1rem;
+    display: block;
+    width: 65vw;
+  }
 }
