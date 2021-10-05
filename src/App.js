@@ -64,7 +64,7 @@ export default function App() {
             {movies[userInput].map((movies) => (
               <li key={movies.name}>
                 <div className="movies">
-                  {movies.name}, {movies.genres}, {movies.director}, {movies.rating/5}
+                  {movies.name}, {movies.genres}, {movies.director}, {movies.rating}
                 </div>
               </li>
             ))}
